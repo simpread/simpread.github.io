@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Rss利器-TinyTinyRss 杂谈 | blog403-Rss|Docker的简单分享</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="google-site-verification" content="8ddHBC7t1clOXfEgpUkNDkmkgQFwZH_lweGO3_ps-5A" />
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://blog.simple403.site/favicon.ico?v=1671106864855">
+<link rel="stylesheet" href="https://blog.simple403.site/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L3574NGSHB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L3574NGSHB');
+</script>
+
+
+
+    <meta name="description" content="
+强大的过滤功能
+相较于另一款热门Rss阅读器-FreshRss，TinyTinyRss（后文称为ttrss）的显著优势在于自带过滤功能 。这在其他网站服务中一般为付费功能。ttrss能对任意分类或某一订阅源通过编写正则式的方式来实现精准过..." />
+    <meta name="keywords" content="rss,ttrss,TinyTinyRss" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://blog.simple403.site">
+        <img src="https://blog.simple403.site/images/avatar.png?v=1671106864855" class="site-logo" alt="logo">
+        <h1 class="site-title">blog403-Rss|Docker的简单分享</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      简单 纯粹 原创，写给自己的博客。少讲专业术语，记录小白的一些经验与收获。
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+ | <a class="rss" href="https://blog.simple403.site/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">Rss利器-TinyTinyRss 杂谈</h2>
+            <div class="post-date">2022-12-14</div>
+            
+            <div class="post-content" v-pre>
+              <figure data-type="image" tabindex="1"><img src="https://blog.simple403.site/post-images/1671106859252.webp" alt="" loading="lazy"></figure>
+<h2 id="强大的过滤功能"><strong>强大的过滤功能</strong></h2>
+<p>相较于另一款热门Rss阅读器-FreshRss，<strong>TinyTinyRss</strong>（后文称为ttrss）的显著优势在于自带<strong>过滤功能</strong> 。这在其他网站服务中一般为付费功能。ttrss能对任意分类或某一订阅源通过编写<strong>正则式</strong>的方式来实现精准过滤。<em>标题、内容、链接、作者、tag</em> 均支持匹配；操作包含：<em>删除、已读、收藏、tag</em>等等。</p>
+<p>举个栗子，某一网站有时发送广告软文，此时就可以通过编写规则<code>“开课|拼团|拼夕夕”</code>在标题中匹配，让标题带有相应关键词的文章不再收录进数据库（删除）。</p>
+<p><strong>Tip</strong>：</p>
+<ul>
+<li>
+<p>对于已经获取的文章不生效，后来的更新则正常过滤。</p>
+</li>
+<li>
+<p>建议勾选“匹配任意规则”，并通过点击 “测试” 按钮检测规则是否生效。</p>
+</li>
+</ul>
+<h2 id="安装ttrss"><strong>安装ttrss</strong></h2>
+<p>目前有两种安装的途径：1. <a href="https://git.tt-rss.org/fox/ttrss-docker-compose.git/tree/README.md?h=static-dockerhub">官网</a>；2. <a href="http://ttrss.henry.wang/zh/#%E9%83%A8%E7%BD%B2">Awesome TTRSS</a></p>
+<ul>
+<li>
+<p>方式1：老手、爱折腾。在阅读英文指示后，配置一些环境变量，即可上线。</p>
+</li>
+<li>
+<p>方式2：新手、懒得冻手。改一两个值，即可上线。</p>
+</li>
+</ul>
+<p>中文网络近期（2022）基本都是按照<strong>方式2</strong>进行安装，相应的教程很多，我推荐<a href="https://blognas.hwb0307.com/linux/docker/788"><strong>这一篇</strong></a>。步骤相当详细，并且附有很多相关设置说明。如果你对Rss、docker又或是Linux感兴趣，网站上还有很多相关教程，这位站长也很热心，欢迎提问。</p>
+<p><strong>Tip</strong>:</p>
+<ul>
+<li>
+<p>插件中的<code>af_readability</code>、<code>mercucy_fulltext</code>和<code>opencc</code>按需开启，后两者如果不需要可以在<code>docker-容器</code>中手动关闭。</p>
+</li>
+<li>
+<p><code>SELF_URL_PATH</code>  docker-compose配置中的坑。</p>
+</li>
+</ul>
+<p>如果是反向代理，那么填写相应网址例如“https://example.com”；如果仅仅是局域网（本地），比如使用软路由，那么就填“http://路由器ip:端口”。注意http与https。</p>
+<h2 id="配合rss生成器"><strong>配合Rss生成器</strong></h2>
+<ul>
+<li>
+<p><strong>Rsshub</strong>: 中文社区体验极佳的Rss生成器。上手快，可自建。<a href="https://docs.rsshub.app/">官网</a></p>
+</li>
+<li>
+<p><strong>Rsshub Rader</strong>: 相应的浏览器插件，推荐chrome版。Firefox版的规则无法自动更新。</p>
+</li>
+</ul>
+<p>通过这两大利器，主流的网站（不止中文）基本都能获取相应的Rss订阅源。</p>
+<h2 id="配合阅读器"><strong>配合阅读器</strong></h2>
+<p>ttrss的网页端已经足够优秀，有多个主题可供选择。除此之外，还有安卓端的<strong>feedme</strong>，ios的<strong>reeder</strong>等软件可适配。</p>
+<p><strong>Tip</strong>:</p>
+<ul>
+<li>常见坑<code>fever api</code>: 在阅读器中设置时（比如在reeder中）填写的<code>server</code>应为“https://上文的SELF_URL_PATH/plugins/fever/” PS：http与https自行调整。而非ttrss插件中所写的后缀“/plugins.local/fever&quot;；所谓的<code>Email</code>其实填的是用户名，如果你没有更改的话，默认为admin；<code>Password</code>为插件设置<code>Fever Emulation</code>中自己所设密码。</li>
+<li>ttrss网页端时常有一些php的警告，忽视就好。</li>
+</ul>
+<p>最后，你可以在这里找到更多Rss相关内容：<a href="https://github.com/AboutRSS/ALL-about-RSS">地址1</a>、<a href="https://efficiencyfollow.notion.site/RSS-01f580f05df2412993c5ad0f68f0a95d">地址2</a></p>
+<hr>
+<p><strong>下期更新</strong>：解决无现成的Rss源的几套方案。如自定义等。</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://blog.simple403.site/tag/Y8GxDdSyJ/" class="tag">
+                    rss
+                  </a>
+                
+                  <a href="https://blog.simple403.site/tag/CGaCnaBcus/" class="tag">
+                    ttrss
+                  </a>
+                
+                  <a href="https://blog.simple403.site/tag/5W1CWEvvG6/" class="tag">
+                    TinyTinyRss
+                  </a>
+                
+              </div>
+            
+            
+			
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad()
+  </script>
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '7df815694028ff18f568',
+        clientSecret: '0d555b8fd641275c8de8db44a3fbfdef12382430',
+        repo: 'simpread.github.io',
+        owner: 'simpread',
+        admin: ['simpread'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+    
+  </body>
+  
+</html>

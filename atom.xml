@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://blog.simple403.site</id>
+    <title>blog403-Rss|Docker的简单分享</title>
+    <updated>2022-12-15T12:21:49.533Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://blog.simple403.site"/>
+    <link rel="self" href="https://blog.simple403.site/atom.xml"/>
+    <subtitle>简单 纯粹 原创，写给自己的博客。少讲专业术语，记录小白的一些经验与收获。</subtitle>
+    <logo>https://blog.simple403.site/images/avatar.png</logo>
+    <icon>https://blog.simple403.site/favicon.ico</icon>
+    <rights>All rights reserved 2022, blog403-Rss|Docker的简单分享</rights>
+    <entry>
+        <title type="html"><![CDATA[Rss利器-TinyTinyRss 杂谈]]></title>
+        <id>https://blog.simple403.site/ttrss/</id>
+        <link href="https://blog.simple403.site/ttrss/">
+        </link>
+        <updated>2022-12-14T15:48:24.000Z</updated>
+    </entry>
+</feed>
